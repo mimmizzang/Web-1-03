@@ -95,39 +95,12 @@ section > div {
   font-weight: bold;
   margin: 50px auto;
 }
-.X_mas {
+.article_img_box {
   width: 230px;
   float: left;
   margin: 10px 32.5px;
 }
-.X_mas div {
-  font-weight: bold;
-  margin: 10px auto;
-}
-.Bell {
-  width: 230px;
-  float: left;
-  margin: 10px 32.5px;
-}
-.Bell div {
-  font-weight: bold;
-  margin: 10px auto;
-}
-.Bear {
-  width: 230px;
-  float: left;
-  margin: 10px 32.5px;
-}
-.Bear div {
-  font-weight: bold;
-  margin: 10px auto;
-}
-.Socks {
-  width: 230px;
-  float: left;
-  margin: 10px 32.5px;
-}
-.Socks div {
+.article_img_box div {
   font-weight: bold;
   margin: 10px auto;
 }
