@@ -22,9 +22,10 @@ header {
   margin: 0 auto;
   position: relative;
 }
-.header_logo{
+.header_logo {
   position: absolute;
-  left: 10px; bottom: 15px;
+  left: 10px;
+  bottom: 15px;
 }
 .header_logo h1 a {
   color: black;
@@ -37,7 +38,8 @@ header {
 }
 .global_navigation_bar {
   position: absolute;
-  right: 0px; bottom: 0px;
+  right: 0px;
+  bottom: 0px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -63,7 +65,8 @@ header {
 }
 .utility_bar {
   position: absolute;
-  right: 30px; top: 20px;
+  right: 30px;
+  top: 20px;
   font-size: 14px;
 }
 .utility_bar ul li {
@@ -92,7 +95,7 @@ article {
 .article_1 {
   width: 700px;
   height: 400px;
-  background-image: url(700x400.png);
+  background-image: url(./img/700x400.png);
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
@@ -108,11 +111,11 @@ article {
 .article_2 {
   width: 290px;
   height: 190px;
-  background-image: url(290x190.png);
+  background-image: url(./img/290x190.png);
   margin-top: 10px;
-   margin-left: 10px;
-   margin-bottom: 10px;
-   position: relative;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  position: relative;
 }
 .Frozen {
   position: absolute;
@@ -150,7 +153,8 @@ article {
 .Programmer {
   position: absolute;
   width: 300px;
-  top: 160px; left: 50%;
+  top: 160px;
+  left: 50%;
   margin-left: -150px;
 }
 .BE_RICH {
@@ -164,14 +168,14 @@ article {
 .article_5 {
   width: 500px;
   height: 490px;
-  background-image: url(500x490.png);
+  background-image: url(./img/500x490.png);
   margin-left: 10px;
   margin-bottom: 10px;
 }
 .article_6 {
   width: 1000px;
   height: 371px;
-  background-image: url(1000x371.png);
+  background-image: url(./img/1000x371.png);
   margin-bottom: 10px;
   position: relative;
 }
@@ -179,7 +183,8 @@ article {
   position: absolute;
   width: 686px;
   height: 60px;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   margin-top: -30px;
   margin-left: -343px;
   font-size: 50px;
@@ -190,7 +195,7 @@ article {
 .article_7 {
   width: 1000px;
   height: 361px;
-  background-image: url(1000x361.png);
+  background-image: url(./img/1000x361.png);
   margin-bottom: 10px;
   position: relative;
 }
