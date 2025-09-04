@@ -1,0 +1,305 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: verdana;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  width: 100%;
+  border-bottom: solid 1px black;
+}
+.header--gallery {
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+}
+.header--gallery .header_logo h1:hover {
+  text-decoration: underline;
+}
+.header--gallery .header_logo h1:hover a {
+  color: red;
+}
+.header--gallery .global_navigation_bar ul li:hover {
+  text-decoration: underline;
+}
+.header--gallery .global_navigation_bar ul li:hover a {
+  color: red;
+}
+.header--gallery .global_navigation_bar ul li:nth-child(2):hover {
+  text-decoration: none;
+}
+
+.header-inner {
+  width: 1180px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+.header-inner .header_logo {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+}
+.header-inner .global_navigation_bar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.header-inner .global_navigation_bar ul {
+  display: inline-block;
+  height: 31.2px;
+}
+.header-inner .global_navigation_bar ul li {
+  float: left;
+  padding: 0 40px;
+}
+.header-inner .global_navigation_bar ul li a {
+  color: black;
+}
+.header-inner .global_navigation_bar ul li:hover {
+  text-decoration: underline;
+}
+.header-inner .global_navigation_bar ul li:hover a {
+  color: red;
+}
+.header-inner .utility_bar {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 14px;
+}
+.header-inner .utility_bar ul li {
+  float: left;
+  padding: 0 10px;
+}
+.header-inner .utility_bar ul li a {
+  color: darkgray;
+}
+.header-inner .utility_bar ul li:hover {
+  text-decoration: underline;
+}
+.header-inner .utility_bar ul li:hover a {
+  color: red;
+}
+
+#main_image {
+  width: 100%;
+  height: 590px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/bg_main.png);
+}
+#main_image .image_base {
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  margin-left: -400px;
+  font-size: 25px;
+  color: white;
+}
+#main_image .image_base span {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.home-section {
+  width: 1180px;
+  height: 450px;
+  margin: 0 auto;
+}
+.home-section > div {
+  text-align: center;
+  font-weight: bold;
+  margin: 50px auto;
+}
+.home-section .article_img_box {
+  width: 230px;
+  float: left;
+  margin: 10px 32.5px;
+}
+.home-section .article_img_box div {
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+}
+footer #footer_base {
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+footer #footer_base .footer_logo {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+  color: gray;
+}
+footer #footer_base .footer_menu_bar {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  font-size: 14px;
+  color: gray;
+}
+footer #footer_base .footer_menu_bar ul li {
+  float: left;
+  margin: 0 10px;
+}
+footer #footer_base .footer_menu_bar ul li a {
+  color: gray;
+}
+footer #footer_base .footer_menu_bar ul li:hover {
+  text-decoration: underline;
+}
+footer #footer_base .footer_menu_bar ul li:hover a {
+  color: yellow;
+}
+footer #footer_base .footer_menu_bar2 {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+  font-size: 12px;
+  color: gray;
+}
+
+.gallery-section {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 120px;
+  overflow: hidden;
+}
+.gallery-section article {
+  float: left;
+  overflow: hidden;
+}
+.gallery-section article.article_1 {
+  width: 700px;
+  height: 400px;
+  margin: 10px 0;
+  position: relative;
+  background-image: url(../img/700x400.png);
+}
+.gallery-section article.article_1 .Merry_Christmas {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.gallery-section article.article_2 {
+  width: 290px;
+  height: 190px;
+  margin: 10px 0 10px 10px;
+  position: relative;
+  background-image: url(../img/290x190.png);
+}
+.gallery-section article.article_2 .Frozen {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.gallery-section article.article_3 {
+  width: 290px;
+  height: 95px;
+  margin: 0 0 10px 10px;
+  position: relative;
+}
+.gallery-section article.article_3 .Present {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.gallery-section article.article_4 {
+  width: 490px;
+  height: 500px;
+}
+.gallery-section article.article_4 .article_4-x {
+  width: 490px;
+  height: 240px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.gallery-section article.article_4 .article_4-x .Programmer {
+  position: absolute;
+  width: 300px;
+  top: 160px;
+  left: 50%;
+  margin-left: -150px;
+}
+.gallery-section article.article_4 .article_4-x .BE_RICH {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: gold;
+}
+.gallery-section article.article_5 {
+  width: 500px;
+  height: 490px;
+  margin: 0 0 10px 10px;
+  background-image: url(../img/500x490.png);
+}
+.gallery-section article.article_6 {
+  width: 1000px;
+  height: 371px;
+  margin-bottom: 10px;
+  position: relative;
+  background-image: url(../img/1000x371.png);
+}
+.gallery-section article.article_6 .YOURS {
+  position: absolute;
+  width: 686px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  margin-left: -343px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.gallery-section article.article_7 {
+  width: 1000px;
+  height: 361px;
+  margin-bottom: 10px;
+  position: relative;
+  background-image: url(../img/1000x361.png);
+}
+.gallery-section article.article_7 .Programmer_2 {
+  position: absolute;
+  width: 450px;
+  height: 150px;
+  right: 30px;
+  bottom: 40px;
+  font-size: 20px;
+  color: white;
+}
+.gallery-section article.article_7 .Programmer_2 b {
+  font-size: 30px;
+} /*# sourceMappingURL=main.css.map */
