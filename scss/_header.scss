@@ -17,7 +17,11 @@
   position: absolute;
 }
 
-@mixin navigation-style($color: black, $hover-color: red, $padding: 0 40px) {
+@mixin navigation-style(
+  $color: map.get(var.$colors, "black"),
+  $hover-color: map.get(var.$colors, "red"),
+  $padding: 0 40px
+) {
   position: absolute;
   ul li {
     float: left;
