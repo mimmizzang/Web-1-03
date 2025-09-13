@@ -526,7 +526,7 @@ footer .footer_inner {
 }
 .footer_menu-bar ul li {
   float: left;
-  margin: 0 10px;
+  padding: 0 10px;
 }
 .footer_menu-bar ul li a {
   color: gray;

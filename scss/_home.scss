@@ -48,21 +48,11 @@ footer {
 }
 
 .footer_menu-bar {
-  position: absolute;
-
-  ul li {
-    float: left;
-    margin: 0 map.get(var.$spacings, 1);
-    a {
-      color: map.get(var.$colors, "gray");
-    }
-    &:hover {
-      text-decoration: underline;
-      a {
-        color: map.get(var.$colors, "yellow");
-      }
-    }
-  }
+  @include mix.navigation-style(
+    map.get(var.$colors, "gray"),
+    map.get(var.$colors, "yellow"),
+    0 10px
+  );
 }
 
 .footer_address {
