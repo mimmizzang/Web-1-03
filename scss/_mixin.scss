@@ -1,3 +1,27 @@
+@use "sass:map";
+@use "variables" as var;
+
+@mixin navigation-style(
+  $color: map.get(var.$colors, "black"),
+  $hover-color: map.get(var.$colors, "red"),
+  $padding: 0 40px
+) {
+  position: absolute;
+  ul li {
+    float: left;
+    padding: $padding;
+    a {
+      color: $color;
+    }
+    &:hover {
+      text-decoration: underline;
+      a {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
 @mixin pos-center($x: true, $y: true) {
   position: absolute;
 

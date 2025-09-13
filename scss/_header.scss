@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "variables" as var;
+@use "mixin" as mix;
 
 .header {
   width: 100%;
@@ -17,30 +18,9 @@
   position: absolute;
 }
 
-@mixin navigation-style(
-  $color: map.get(var.$colors, "black"),
-  $hover-color: map.get(var.$colors, "red"),
-  $padding: 0 40px
-) {
-  position: absolute;
-  ul li {
-    float: left;
-    padding: $padding;
-    a {
-      color: $color;
-    }
-    &:hover {
-      text-decoration: underline;
-      a {
-        color: $hover-color;
-      }
-    }
-  }
-}
-
 .header_gnb {
   font-weight: bold;
-  @include navigation-style;
+  @include mix.navigation-style;
 
   ul {
     display: inline-block;
@@ -49,7 +29,7 @@
 }
 
 .header_utility-bar {
-  @include navigation-style(
+  @include mix.navigation-style(
     map.get(var.$colors, "darkgray"),
     map.get(var.$colors, "red"),
     0 10px
