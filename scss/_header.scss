@@ -1,110 +1,81 @@
-@use "./variables" as var;
+@use "sass:map";
+@use "variables" as var;
 
 .header {
   width: 100%;
-  border-bottom: solid 1px var.$color-black;
+  border-bottom: solid 1px map.get(var.$colors, "black");
 
-  &--gallery {
-    position: fixed;
-    background-color: var.$color-white;
-    z-index: var.$z-index-header;
+  .header_inner {
+    width: 1180px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
 
-    .header_logo {
-      h1 {
-        &:hover {
-          text-decoration: underline;
+.header_logo {
+  position: absolute;
+}
 
-          a {
-            color: var.$color-hover;
-          }
-        }
-      }
+@mixin navigation-style($color: black, $hover-color: red, $padding: 0 40px) {
+  position: absolute;
+  ul li {
+    float: left;
+    padding: $padding;
+    a {
+      color: $color;
     }
-
-    .global_navigation_bar {
-      ul {
-        li {
-          &:hover {
-            text-decoration: underline;
-
-            a {
-              color: var.$color-hover;
-            }
-          }
-
-          &:nth-child(2):hover {
-            text-decoration: none;
-          }
-        }
+    &:hover {
+      text-decoration: underline;
+      a {
+        color: $hover-color;
       }
     }
   }
 }
 
-.header-inner {
-  width: 1180px;
-  height: 120px;
-  margin: 0 auto;
-  position: relative;
+.header_gnb {
+  font-weight: bold;
+  @include navigation-style;
+
+  ul {
+    display: inline-block;
+    height: 31.2px;
+  }
+}
+
+.header_utility-bar {
+  @include navigation-style(
+    map.get(var.$colors, "darkgray"),
+    map.get(var.$colors, "red"),
+    0 10px
+  );
+}
+
+.header--gallery {
+  position: fixed;
+  background-color: map.get(var.$colors, "white");
+  z-index: 1;
 
   .header_logo {
-    position: absolute;
-    left: 10px;
-    bottom: 15px;
-  }
-
-  .global_navigation_bar {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: 16px;
-    font-weight: bold;
-
-    ul {
-      display: inline-block;
-      height: 31.2px;
-
-      li {
-        float: left;
-        padding: 0 40px;
-
+    h1 {
+      a {
+        color: map.get(var.$colors, "black");
+      }
+      &:hover {
+        text-decoration: underline;
         a {
-          color: var.$color-black;
-        }
-
-        &:hover {
-          text-decoration: underline;
-
-          a {
-            color: var.$color-hover;
-          }
+          color: map.get(var.$colors, "red");
         }
       }
     }
   }
 
-  .utility_bar {
-    position: absolute;
-    right: 30px;
-    top: 20px;
-    font-size: 14px;
-
-    ul {
-      li {
-        float: left;
-        padding: 0 10px;
-
-        a {
-          color: var.$color-darkgray;
-        }
-
-        &:hover {
-          text-decoration: underline;
-
-          a {
-            color: var.$color-hover;
-          }
-        }
+  .header_gnb {
+    ul li:nth-child(2) {
+      color: map.get(var.$colors, "black");
+      &:hover {
+        text-decoration: none;
       }
     }
   }

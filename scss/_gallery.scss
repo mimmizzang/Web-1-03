@@ -1,143 +1,103 @@
-@use "./variables" as var;
+@use "sass:map";
+@use "variables" as var;
+@use "mixin" as mix;
 
 .gallery-section {
   width: 1000px;
   margin: 0 auto;
   padding-top: 120px;
   overflow: hidden;
+}
 
-  article {
-    float: left;
-    overflow: hidden;
+article {
+  float: left;
+  overflow: hidden;
+}
 
-    &.article_1 {
-      width: 700px;
-      height: 400px;
-      margin: 10px 0;
-      position: relative;
-      background-image: url(../img/700x400.png);
+.article-1 {
+  width: 700px;
+  height: 400px;
+  position: relative;
+  background-image: url(../img/700x400.png);
 
-      .Merry_Christmas {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        font-size: 30px;
-        font-weight: bold;
-        color: var.$color-white;
-      }
-    }
+  .Merry_Christmas {
+    position: absolute;
+  }
+}
 
-    &.article_2 {
-      width: 290px;
-      height: 190px;
-      margin: 10px 0 10px 10px;
-      position: relative;
-      background-image: url(../img/290x190.png);
+.article-2 {
+  width: 290px;
+  height: 190px;
+  position: relative;
+  background-image: url(../img/290x190.png);
 
-      .Frozen {
-        position: absolute;
-        top: 50px;
-        left: 10px;
-        font-size: 20px;
-        font-weight: bold;
-        color: var.$color-white;
-      }
-    }
+  .Frozen {
+    position: absolute;
+  }
+}
 
-    &.article_3 {
-      width: 290px;
-      height: 95px;
-      margin: 0 0 10px 10px;
-      position: relative;
+.article-3 {
+  width: 290px;
+  height: 95px;
+  position: relative;
 
-      .Present {
-        position: absolute;
-        right: 10px;
-        bottom: 20px;
-        font-size: 20px;
-        font-weight: bold;
-        color: var.$color-white;
-      }
-    }
+  .Present {
+    position: absolute;
+  }
+}
 
-    &.article_4 {
-      width: 490px;
-      height: 500px;
+.article-4 {
+  width: 490px;
+  height: 500px;
+}
 
-      .article_4-x {
-        width: 490px;
-        height: 240px;
-        margin-bottom: 10px;
-        position: relative;
+.article-4-x {
+  width: 490px;
+  height: 240px;
+  position: relative;
 
-        .Programmer {
-          position: absolute;
-          width: 300px;
-          top: 160px;
-          left: 50%;
-          margin-left: -150px;
-        }
+  .Programmer {
+    position: absolute;
+    width: 300px;
+    top: 160px;
+    @include mix.pos-center($y: false);
+  }
 
-        .BE_RICH {
-          position: absolute;
-          right: 20px;
-          bottom: 30px;
-          font-size: 30px;
-          font-weight: bold;
-          color: var.$color-gold;
-        }
-      }
-    }
+  .BE_RICH {
+    position: absolute;
+  }
+}
 
-    &.article_5 {
-      width: 500px;
-      height: 490px;
-      margin: 0 0 10px 10px;
-      background-image: url(../img/500x490.png);
-    }
+.article-5 {
+  width: 500px;
+  height: 490px;
+  background-image: url(../img/500x490.png);
+}
 
-    &.article_6 {
-      width: 1000px;
-      height: 371px;
-      margin-bottom: 10px;
-      position: relative;
-      background-image: url(../img/1000x371.png);
+.article-6 {
+  width: 1000px;
+  height: 371px;
+  position: relative;
+  background-image: url(../img/1000x371.png);
 
-      .YOURS {
-        position: absolute;
-        width: 686px;
-        height: 60px;
-        top: 50%;
-        left: 50%;
-        margin-top: -30px;
-        margin-left: -343px;
-        font-size: 50px;
-        font-weight: bold;
-        color: var.$color-white;
-        text-shadow: 2px 2px 2px var.$color-black;
-      }
-    }
+  .YOURS {
+    position: absolute;
+    width: 686px;
+    height: 60px;
+    @include mix.pos-center();
+    text-shadow: 2px 2px 2px map.get(var.$colors, "black");
+  }
+}
 
-    &.article_7 {
-      width: 1000px;
-      height: 361px;
-      margin-bottom: 10px;
-      position: relative;
-      background-image: url(../img/1000x361.png);
+.article-7 {
+  width: 1000px;
+  height: 361px;
+  position: relative;
+  background-image: url(../img/1000x361.png);
 
-      .Programmer_2 {
-        position: absolute;
-        width: 450px;
-        height: 150px;
-        right: 30px;
-        bottom: 40px;
-        font-size: 20px;
-        color: var.$color-white;
-
-        b {
-          font-size: 30px;
-        }
-      }
-    }
+  .Programmer_2 {
+    position: absolute;
+    width: 450px;
+    height: 150px;
   }
 }

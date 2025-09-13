@@ -1,0 +1,61 @@
+@use "variables" as var;
+
+.font-bold {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+
+@each $key, $value in var.$font-sizes {
+  .fs-#{$key} {
+    font-size: $value;
+  }
+}
+
+@each $key, $value in var.$colors {
+  .text-#{$key} {
+    color: $value;
+  }
+}
+
+@each $key, $value in var.$spacings {
+  .m-#{$key} {
+    margin: $value;
+  }
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+}
+
+@each $key, $value in var.$spacings {
+  .top-#{$key} {
+    top: $value;
+  }
+  .bottom-#{$key} {
+    bottom: $value;
+  }
+  .left-#{$key} {
+    left: $value;
+  }
+  .right-#{$key} {
+    right: $value;
+  }
+}
