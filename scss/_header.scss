@@ -3,63 +3,64 @@
 @use "mixin" as mix;
 
 .header {
-  width: 100%;
-  border-bottom: solid 1px map.get(var.$colors, "black");
+  $black: map.get(var.$colors, "black");
+  $red: map.get(var.$colors, "red");
+  $white: map.get(var.$colors, "white");
+  $darkgray: map.get(var.$colors, "darkgray");
 
-  .header_inner {
+  width: 100%;
+  border-bottom: solid 1px $black;
+
+  &__inner {
     width: 1180px;
     height: 120px;
     margin: 0 auto;
     position: relative;
   }
-}
 
-.header_logo {
-  position: absolute;
-}
-
-.header_gnb {
-  font-weight: bold;
-  @include mix.navigation-style;
-
-  ul {
-    display: inline-block;
-    height: 31.2px;
+  &__logo {
+    position: absolute;
   }
-}
 
-.header_utility-bar {
-  @include mix.navigation-style(
-    map.get(var.$colors, "darkgray"),
-    map.get(var.$colors, "red"),
-    0 10px
-  );
-}
+  &__gnb {
+    @include mix.navigation-style;
 
-.header--gallery {
-  position: fixed;
-  background-color: map.get(var.$colors, "white");
-  z-index: 1;
-
-  .header_logo {
-    h1 {
-      a {
-        color: map.get(var.$colors, "black");
-      }
-      &:hover {
-        text-decoration: underline;
-        a {
-          color: map.get(var.$colors, "red");
-        }
-      }
+    ul {
+      display: inline-block;
+      height: 31.2px;
     }
   }
 
-  .header_gnb {
-    ul li:nth-child(2) {
-      color: map.get(var.$colors, "black");
-      &:hover {
-        text-decoration: none;
+  &__utility-bar {
+    @include mix.navigation-style($darkgray, $red, 0 10px);
+  }
+
+  // gallery.html header
+  &--gallery {
+    position: fixed;
+    background-color: $white;
+    z-index: 1;
+
+    .header__logo {
+      h1 {
+        a {
+          color: $black;
+        }
+        &:hover {
+          text-decoration: underline;
+          a {
+            color: $red;
+          }
+        }
+      }
+    }
+
+    .header__gnb {
+      ul li:nth-child(2) {
+        color: $black;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }

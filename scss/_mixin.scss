@@ -1,6 +1,24 @@
 @use "sass:map";
 @use "variables" as var;
 
+// 유틸리티 클래스와 비교
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin fixed($z: 1, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: fixed;
+  z-index: $z;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
 @mixin navigation-style(
   $color: map.get(var.$colors, "black"),
   $hover-color: map.get(var.$colors, "red"),

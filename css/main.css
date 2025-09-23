@@ -406,74 +406,69 @@ ul {
   width: 100%;
   border-bottom: solid 1px black;
 }
-.header .header_inner {
+.header__inner {
   width: 1180px;
   height: 120px;
   margin: 0 auto;
   position: relative;
 }
-
-.header_logo {
+.header__logo {
   position: absolute;
 }
-
-.header_gnb {
-  font-weight: bold;
+.header__gnb {
   position: absolute;
 }
-.header_gnb ul li {
+.header__gnb ul li {
   float: left;
   padding: 0 40px;
 }
-.header_gnb ul li a {
+.header__gnb ul li a {
   color: black;
 }
-.header_gnb ul li:hover {
+.header__gnb ul li:hover {
   text-decoration: underline;
 }
-.header_gnb ul li:hover a {
+.header__gnb ul li:hover a {
   color: red;
 }
-.header_gnb ul {
+.header__gnb ul {
   display: inline-block;
   height: 31.2px;
 }
-
-.header_utility-bar {
+.header__utility-bar {
   position: absolute;
 }
-.header_utility-bar ul li {
+.header__utility-bar ul li {
   float: left;
   padding: 0 10px;
 }
-.header_utility-bar ul li a {
+.header__utility-bar ul li a {
   color: darkgray;
 }
-.header_utility-bar ul li:hover {
+.header__utility-bar ul li:hover {
   text-decoration: underline;
 }
-.header_utility-bar ul li:hover a {
+.header__utility-bar ul li:hover a {
   color: red;
 }
-
 .header--gallery {
   position: fixed;
   background-color: white;
   z-index: 1;
 }
-.header--gallery .header_logo h1 a {
+.header--gallery .header__logo h1 a {
   color: black;
 }
-.header--gallery .header_logo h1:hover {
+.header--gallery .header__logo h1:hover {
   text-decoration: underline;
 }
-.header--gallery .header_logo h1:hover a {
+.header--gallery .header__logo h1:hover a {
   color: red;
 }
-.header--gallery .header_gnb ul li:nth-child(2) {
+.header--gallery .header__gnb ul li:nth-child(2) {
   color: black;
 }
-.header--gallery .header_gnb ul li:nth-child(2):hover {
+.header--gallery .header__gnb ul li:nth-child(2):hover {
   text-decoration: none;
 }
 
