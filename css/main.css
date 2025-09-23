@@ -409,8 +409,9 @@ ul {
 .header__inner {
   width: 1180px;
   height: 120px;
-  margin: 0 auto;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header__logo {
   position: absolute;
@@ -472,17 +473,16 @@ ul {
   text-decoration: none;
 }
 
-#main-image {
+.main-image {
   width: 100%;
   height: 590px;
   position: relative;
   overflow: hidden;
   background-image: url(../img/bg_main.png);
 }
-#main-image .image-base {
+.main-image__inner {
   width: 800px;
   height: 300px;
-  position: absolute;
   overflow: hidden;
   top: 150px;
   position: absolute;
@@ -493,47 +493,46 @@ ul {
 .home-section {
   width: 1180px;
   height: 450px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.home-section .article-img-box {
+.home-section__img-box {
   width: 230px;
   float: left;
   margin: 10px 32.5px;
 }
 
-footer {
+.footer {
   width: 100%;
   background-color: black;
 }
-footer .footer_inner {
+.footer__inner {
   width: 1000px;
   height: 100px;
-  margin: 0 auto;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.footer_logo {
+.footer__logo {
   position: absolute;
 }
-
-.footer_menu-bar {
+.footer__menu-bar {
   position: absolute;
 }
-.footer_menu-bar ul li {
+.footer__menu-bar ul li {
   float: left;
   padding: 0 10px;
 }
-.footer_menu-bar ul li a {
+.footer__menu-bar ul li a {
   color: gray;
 }
-.footer_menu-bar ul li:hover {
+.footer__menu-bar ul li:hover {
   text-decoration: underline;
 }
-.footer_menu-bar ul li:hover a {
+.footer__menu-bar ul li:hover a {
   color: yellow;
 }
-
-.footer_address {
+.footer__address {
   position: absolute;
 }
 

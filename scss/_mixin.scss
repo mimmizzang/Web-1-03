@@ -19,6 +19,11 @@
   left: $left;
 }
 
+@mixin center-block-x {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @mixin navigation-style(
   $color: map.get(var.$colors, "black"),
   $hover-color: map.get(var.$colors, "red"),

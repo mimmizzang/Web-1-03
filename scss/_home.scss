@@ -2,17 +2,16 @@
 @use "variables" as var;
 @use "mixin" as mix;
 
-#main-image {
+.main-image {
   width: 100%;
   height: 590px;
   position: relative;
   overflow: hidden;
   background-image: url(../img/bg_main.png);
 
-  .image-base {
+  &__inner {
     width: 800px;
     height: 300px;
-    position: absolute;
     overflow: hidden;
     top: 150px;
     @include mix.pos-center($y: false);
@@ -22,39 +21,11 @@
 .home-section {
   width: 1180px;
   height: 450px;
-  margin: 0 auto;
+  @include mix.center-block-x;
 
-  .article-img-box {
+  &__img-box {
     width: 230px;
     float: left;
     margin: map.get(var.$spacings, 1) 32.5px;
   }
-}
-
-footer {
-  width: 100%;
-  background-color: map.get(var.$colors, "black");
-
-  .footer_inner {
-    width: 1000px;
-    height: 100px;
-    margin: 0 auto;
-    position: relative;
-  }
-}
-
-.footer_logo {
-  position: absolute;
-}
-
-.footer_menu-bar {
-  @include mix.navigation-style(
-    map.get(var.$colors, "gray"),
-    map.get(var.$colors, "yellow"),
-    0 10px
-  );
-}
-
-.footer_address {
-  position: absolute;
 }

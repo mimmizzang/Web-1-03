@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "variables" as var;
+@use "mixin" as mix;
+
+.footer {
+  $black: map.get(var.$colors, "black");
+  $gray: map.get(var.$colors, "gray");
+  $yellow: map.get(var.$colors, "yellow");
+
+  width: 100%;
+  background-color: $black;
+
+  &__inner {
+    width: 1000px;
+    height: 100px;
+    position: relative;
+    @include mix.center-block-x;
+  }
+
+  &__logo {
+    position: absolute;
+  }
+
+  &__menu-bar {
+    @include mix.navigation-style($gray, $yellow, 0 10px);
+  }
+
+  &__address {
+    position: absolute;
+  }
+}
