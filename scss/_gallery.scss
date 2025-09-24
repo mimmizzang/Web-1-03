@@ -1,103 +1,137 @@
 @use "sass:map";
+@use "sass:list";
 @use "variables" as var;
 @use "mixin" as mix;
 
 .gallery-section {
   width: 1000px;
-  margin: 0 auto;
   padding-top: 120px;
   overflow: hidden;
+  @include mix.center-block-x;
 }
 
-article {
-  float: left;
-  overflow: hidden;
-}
+$articles: (
+  "1": (
+    width: 700px,
+    height: 400px,
+    bg: "700x400.png",
+    inner: (
+      "MerryChristmas",
+    ),
+  ),
+  "2": (
+    width: 290px,
+    height: 190px,
+    bg: "290x190.png",
+    inner: (
+      "Frozen",
+    ),
+  ),
+  "3": (
+    width: 290px,
+    height: 95px,
+    bg: "290x95-1.png",
+    inner: (
+      "Present",
+    ),
+  ),
+  "4": (
+    width: 290px,
+    height: 95px,
+    bg: "290x95-2.png",
+  ),
+  "5": (
+    width: 490px,
+    height: 500px,
+  ),
+  "5-1": (
+    width: 490px,
+    height: 240px,
+    bg: "490x240-1.png",
+    inner: (
+      "Programmer",
+    ),
+  ),
+  "5-2": (
+    width: 490px,
+    height: 240px,
+    bg: "490x240-2.png",
+    inner: (
+      "BeRich",
+    ),
+  ),
+  "6": (
+    width: 500px,
+    height: 490px,
+    bg: "500x490.png",
+  ),
+  "7": (
+    width: 1000px,
+    height: 371px,
+    bg: "1000x371.png",
+    inner: (
+      "Yours",
+    ),
+    inner-size: (
+      686px,
+      60px,
+    ),
+    pos-center: true,
+    text-shadow: true,
+  ),
+  "8": (
+    width: 1000px,
+    height: 361px,
+    bg: "1000x361.png",
+    inner: (
+      "Programmer2",
+    ),
+    inner-size: (
+      450px,
+      150px,
+    ),
+  ),
+);
 
-.article-1 {
-  width: 700px;
-  height: 400px;
-  position: relative;
-  background-image: url(../img/700x400.png);
+@each $key, $props in $articles {
+  .article--#{$key} {
+    width: map.get($props, width);
+    height: map.get($props, height);
+    float: left;
+    position: relative;
+    overflow: hidden;
 
-  .Merry_Christmas {
-    position: absolute;
-  }
-}
+    @if map.has-key($props, bg) {
+      $bg-img: map.get($props, bg);
+      background-image: url(../img/#{$bg-img});
+    }
 
-.article-2 {
-  width: 290px;
-  height: 190px;
-  position: relative;
-  background-image: url(../img/290x190.png);
+    @if map.has-key($props, inner) {
+      @each $inner-name in map.get($props, inner) {
+        .#{$inner-name} {
+          position: absolute;
 
-  .Frozen {
-    position: absolute;
-  }
-}
+          @if map.has-key($props, inner-size) {
+            $size: map.get($props, inner-size);
+            width: list.nth($size, 1);
+            height: list.nth($size, 2);
+          }
 
-.article-3 {
-  width: 290px;
-  height: 95px;
-  position: relative;
+          @if map.get($props, pos-center) {
+            @include mix.pos-center();
+          }
 
-  .Present {
-    position: absolute;
-  }
-}
+          @if map.get($props, text-shadow) {
+            text-shadow: 2px 2px 2px map.get(var.$colors, "black");
+          }
 
-.article-4 {
-  width: 490px;
-  height: 500px;
-}
-
-.article-4-x {
-  width: 490px;
-  height: 240px;
-  position: relative;
-
-  .Programmer {
-    position: absolute;
-    width: 300px;
-    top: 160px;
-    @include mix.pos-center($y: false);
-  }
-
-  .BE_RICH {
-    position: absolute;
-  }
-}
-
-.article-5 {
-  width: 500px;
-  height: 490px;
-  background-image: url(../img/500x490.png);
-}
-
-.article-6 {
-  width: 1000px;
-  height: 371px;
-  position: relative;
-  background-image: url(../img/1000x371.png);
-
-  .YOURS {
-    position: absolute;
-    width: 686px;
-    height: 60px;
-    @include mix.pos-center();
-    text-shadow: 2px 2px 2px map.get(var.$colors, "black");
-  }
-}
-
-.article-7 {
-  width: 1000px;
-  height: 361px;
-  position: relative;
-  background-image: url(../img/1000x361.png);
-
-  .Programmer_2 {
-    position: absolute;
-    width: 450px;
-    height: 150px;
+          @if $key == "5-1" and $inner-name == "Programmer" {
+            top: 160px;
+            width: 300px;
+            @include mix.pos-center($y: false);
+          }
+        }
+      }
+    }
   }
 }

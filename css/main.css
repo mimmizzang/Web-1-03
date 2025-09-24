@@ -538,80 +538,112 @@ ul {
 
 .gallery-section {
   width: 1000px;
-  margin: 0 auto;
   padding-top: 120px;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-article {
+.article--1 {
+  width: 700px;
+  height: 400px;
   float: left;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/700x400.png);
+}
+.article--1 .MerryChristmas {
+  position: absolute;
+}
+
+.article--2 {
+  width: 290px;
+  height: 190px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/290x190.png);
+}
+.article--2 .Frozen {
+  position: absolute;
+}
+
+.article--3 {
+  width: 290px;
+  height: 95px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/290x95-1.png);
+}
+.article--3 .Present {
+  position: absolute;
+}
+
+.article--4 {
+  width: 290px;
+  height: 95px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/290x95-2.png);
+}
+
+.article--5 {
+  width: 490px;
+  height: 500px;
+  float: left;
+  position: relative;
   overflow: hidden;
 }
 
-.article-1 {
-  width: 700px;
-  height: 400px;
-  position: relative;
-  background-image: url(../img/700x400.png);
-}
-.article-1 .Merry_Christmas {
-  position: absolute;
-}
-
-.article-2 {
-  width: 290px;
-  height: 190px;
-  position: relative;
-  background-image: url(../img/290x190.png);
-}
-.article-2 .Frozen {
-  position: absolute;
-}
-
-.article-3 {
-  width: 290px;
-  height: 95px;
-  position: relative;
-}
-.article-3 .Present {
-  position: absolute;
-}
-
-.article-4 {
-  width: 490px;
-  height: 500px;
-}
-
-.article-4-x {
+.article--5-1 {
   width: 490px;
   height: 240px;
+  float: left;
   position: relative;
+  overflow: hidden;
+  background-image: url(../img/490x240-1.png);
 }
-.article-4-x .Programmer {
+.article--5-1 .Programmer {
   position: absolute;
-  width: 300px;
   top: 160px;
+  width: 300px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-.article-4-x .BE_RICH {
+
+.article--5-2 {
+  width: 490px;
+  height: 240px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/490x240-2.png);
+}
+.article--5-2 .BeRich {
   position: absolute;
 }
 
-.article-5 {
+.article--6 {
   width: 500px;
   height: 490px;
+  float: left;
+  position: relative;
+  overflow: hidden;
   background-image: url(../img/500x490.png);
 }
 
-.article-6 {
+.article--7 {
   width: 1000px;
   height: 371px;
+  float: left;
   position: relative;
+  overflow: hidden;
   background-image: url(../img/1000x371.png);
 }
-.article-6 .YOURS {
+.article--7 .Yours {
   position: absolute;
   width: 686px;
   height: 60px;
@@ -622,13 +654,15 @@ article {
   text-shadow: 2px 2px 2px black;
 }
 
-.article-7 {
+.article--8 {
   width: 1000px;
   height: 361px;
+  float: left;
   position: relative;
+  overflow: hidden;
   background-image: url(../img/1000x361.png);
 }
-.article-7 .Programmer_2 {
+.article--8 .Programmer2 {
   position: absolute;
   width: 450px;
   height: 150px;
